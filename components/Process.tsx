@@ -1,87 +1,42 @@
 const steps = [
-  {
-    number: "01",
-    title: "Descubrimiento",
-    description:
-      "Entendemos tu negocio, identificamos el problema principal y detectamos restricciones de datos y herramientas.",
-  },
-  {
-    number: "02",
-    title: "Priorización",
-    description:
-      "Evaluamos impacto vs facilidad y seleccionamos un caso inicial de alto valor y bajo riesgo.",
-  },
-  {
-    number: "03",
-    title: "Diseño del piloto",
-    description:
-      "Definimos alcance acotado, responsables, cronograma y métricas de éxito antes de empezar.",
-  },
-  {
-    number: "04",
-    title: "Implementación",
-    description:
-      "Construimos la solución, integramos herramientas, probamos con usuarios reales e iteramos.",
-  },
-  {
-    number: "05",
-    title: "Capacitación",
-    description:
-      "Entrenamos a los usuarios por rol, dejamos guías y establecemos buenas prácticas de uso.",
-  },
-  {
-    number: "06",
-    title: "Escalamiento",
-    description:
-      "Medimos resultados, documentamos el caso y diseñamos el roadmap para ampliar a otras áreas.",
-  },
+  { num: "01", title: "Descubrimiento",     description: "Entendemos tu negocio, identificamos el problema principal y detectamos restricciones de datos y herramientas." },
+  { num: "02", title: "Priorización",        description: "Evaluamos impacto vs facilidad y seleccionamos un caso inicial de alto valor y bajo riesgo." },
+  { num: "03", title: "Diseño del piloto",   description: "Definimos alcance acotado, responsables, cronograma y métricas de éxito antes de empezar." },
+  { num: "04", title: "Implementación",      description: "Construimos la solución, integramos herramientas, probamos con usuarios reales e iteramos." },
+  { num: "05", title: "Capacitación",        description: "Entrenamos a los usuarios por rol, dejamos guías y establecemos buenas prácticas de uso." },
+  { num: "06", title: "Escalamiento",        description: "Medimos resultados, documentamos el caso y diseñamos el roadmap para ampliar a otras áreas." },
 ];
 
 export default function Process() {
   return (
-    <section id="proceso" className="relative py-24 sm:py-32 bg-[var(--bg-dark)] overflow-hidden">
+    <section id="proceso" className="relative py-24 sm:py-32 bg-slate-950 overflow-hidden">
       <div className="absolute inset-0 dot-grid-dark" />
-      <div className="absolute top-0 right-0 w-96 h-96 orb bg-[var(--accent)]/[0.06]" />
+      <div className="absolute -top-20 right-0 w-96 h-96 orb bg-teal-500/10 animate-pulse-soft" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <span className="section-label text-[var(--accent)]">Proceso</span>
+        <div className="max-w-2xl mb-16">
+          <span className="label text-teal-400">Proceso</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight tracking-tight">
             Cómo{" "}
-            <span style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic" }}>
+            <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
               trabajamos
-            </span>
+            </em>
           </h2>
-          <p className="mt-5 text-lg text-[var(--text-on-dark-muted)] leading-relaxed">
-            Un proceso probado que va del diagnóstico al resultado, sin
-            sorpresas.
+          <p className="mt-4 text-lg text-slate-400 leading-relaxed">
+            Un proceso probado que va del diagnóstico al resultado, sin sorpresas.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-[var(--radius-lg)] overflow-hidden border border-white/[0.06]">
-          {steps.map((step, i) => (
-            <div
-              key={step.number}
-              className="group relative p-8 bg-[var(--bg-dark)] hover:bg-[var(--bg-dark-subtle)] transition-colors duration-500"
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          {steps.map((step) => (
+            <div key={step.num}
+              className="group p-8 bg-slate-950 hover:bg-slate-900 transition-colors duration-300">
               <div className="flex items-center gap-3 mb-5">
-                <span
-                  className="text-xs font-medium text-[var(--accent)] tracking-wider"
-                  style={{ fontFamily: "var(--font-mono), monospace" }}
-                >
-                  {step.number}
-                </span>
-                <div className="flex-1 h-px bg-white/[0.06] group-hover:bg-[var(--accent)]/30 transition-colors duration-500" />
+                <span className="label text-teal-500">{step.num}</span>
+                <div className="flex-1 h-px bg-white/5 group-hover:bg-teal-500/20 transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-semibold text-white">
-                {step.title}
-              </h3>
-              <p className="mt-3 text-sm text-[var(--text-on-dark-muted)] leading-relaxed">
-                {step.description}
-              </p>
-              {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-px w-px h-8 -translate-y-1/2 bg-white/[0.08]" />
-              )}
+              <h3 className="text-base font-semibold text-white mb-2">{step.title}</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
