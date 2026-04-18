@@ -5,18 +5,18 @@ import { useState } from "react";
 const perks = [
   {
     icon: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z",
-    title: "Respondemos en menos de 24h",
-    description: "No tenés que esperar 3 días para saber si podemos ayudarte. Si hay fit, lo sabés rápido.",
+    title: "No te dejamos esperando",
+    description: "Si hay fit, lo sabés en menos de 24 horas. Sin seguimiento de CRM, sin \"te contactamos pronto\".",
   },
   {
     icon: "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z",
-    title: "Hablás con quien va a trabajar en tu proyecto",
-    description: "No con un account manager. Directo con el ingeniero que va a hacer el trabajo.",
+    title: "Hablás directo con quien hace el trabajo",
+    description: "No con un account manager. El ingeniero que toma la llamada es el mismo que audita tu infra.",
   },
   {
     icon: "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
-    title: "No firmás nada antes de ver el diagnóstico",
-    description: "El primer paso es gratuito. Si después de 30 minutos no ves valor, no hay nada más que pagar.",
+    title: "El primer paso no te compromete a nada",
+    description: "El diagnóstico es gratuito. Si después de 30 minutos no ves valor, no hay nada más.",
   },
 ];
 
@@ -44,15 +44,12 @@ export default function Contact() {
           <div>
             <span className="label text-teal-600">Diagnóstico gratuito</span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight tracking-tight">
-              Empezamos con 30 minutos.{" "}
+              Cada mes sin diagnóstico
+              es un mes pagando de más.{" "}
               <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-                Sin propuestas, sin compromiso.
+                El primero dura 30 minutos.
               </em>
             </h2>
-            <p className="mt-5 text-lg text-neutral-500 leading-relaxed">
-              Empezamos con una conversación de 30 minutos. Sin presentaciones largas,
-              sin propuestas genéricas. Te decimos si podemos ayudarte y cómo — gratis.
-            </p>
 
             <div className="mt-10 space-y-6">
               {perks.map((perk) => (
@@ -132,7 +129,12 @@ export default function Contact() {
                   </svg>
                 </button>
                 <p className="text-center text-xs text-neutral-400 pt-1">
-                  Sin compromiso. Si no hay fit, te lo decimos en esa primera llamada.
+                  Si tu cloud bill es de $5,000/mes o más, el diagnóstico
+                  se paga solo en el primer mes.
+                </p>
+                <p className="text-center text-xs text-neutral-400 pt-1">
+                  Sin compromiso. Si en esa primera llamada no hay fit —
+                  de cualquier lado — no hay nada más.
                 </p>
               </form>
             )}
