@@ -24,6 +24,11 @@ export default function About() {
             </h2>
             <div className="mt-8 space-y-4 text-neutral-500 leading-relaxed">
               <p className="text-lg">
+                No prometemos innovación — prometemos mejoras concretas. Equipos mid-market
+                y enterprise que necesitan pasar de auditoría a producción sin sorpresas en el
+                camino.
+              </p>
+              <p className="text-lg">
                 Somos una consultora especializada en cloud, Kubernetes e IA aplicada.
                 Auditamos, implementamos y formamos — cubriendo el ciclo completo que la mayoría
                 no cubre.
@@ -33,17 +38,26 @@ export default function About() {
                 cualquier provider y dejamos a los equipos con un modelo operativo unificado,
                 independiente de dónde corra la infraestructura.
               </p>
-              <p>
-                No prometemos innovación — prometemos mejoras concretas. Equipos mid-market
-                y enterprise que necesitan pasar de auditoría a producción sin sorpresas en el
-                camino.
-              </p>
             </div>
           </div>
 
           {/* Right */}
           <div>
-            <p className="label text-neutral-400 mb-7">Por qué elegirnos</p>
+            {/* Case study */}
+            <div className="mb-8 p-6 bg-neutral-50 rounded-2xl border border-neutral-200">
+              <p className="label text-teal-600 mb-4">Un resultado reciente</p>
+              <p className="text-sm text-neutral-700 leading-relaxed">
+                Empresa de tecnología financiera, 90 personas, AWS.
+                Primera semana de auditoría: identificamos $3,800 USD/mes en recursos sin uso activo.
+                Remediación: 2 semanas sin detener operaciones.
+                ROI: cubierto en el primer mes.
+              </p>
+              <p className="mt-3 text-xs text-neutral-400">
+                Compartimos detalles adicionales en la primera llamada.
+              </p>
+            </div>
+
+            <p className="label text-neutral-400 mb-7">Lo que nos diferencia en la práctica</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {differentiators.map((d) => (
                 <div key={d.title}

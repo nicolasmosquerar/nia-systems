@@ -1,10 +1,10 @@
 const metrics = [
-  { process: "Procesamiento de facturas", before: "20 min/factura",    after: "< 2 min",      pct: 90 },
-  { process: "Atención al cliente",       before: "4 horas de espera", after: "< 5 minutos",  pct: 98 },
-  { process: "Generación de reportes",    before: "1 día/semana",      after: "15 minutos",   pct: 97 },
-  { process: "Due diligence",             before: "5 días/expediente", after: "4 horas",      pct: 90 },
-  { process: "Onboarding de empleados",   before: "3 semanas",         after: "1 semana",     pct: 66 },
-  { process: "Búsqueda en documentación", before: "30 min buscando",   after: "30 segundos",  pct: 99 },
+  { process: "Gasto cloud mensual",                  before: "$18,000/mes",    after: "$10,400/mes",    pct: 42 },
+  { process: "Tiempo de deploy a producción",        before: "2–3 días",       after: "< 20 min",       pct: 93 },
+  { process: "MTTR en incidentes de infra",          before: "4 horas",        after: "< 35 min",       pct: 85 },
+  { process: "Onboarding de un ingeniero nuevo",     before: "3 semanas",      after: "2 días",         pct: 76 },
+  { process: "Alertas sin contexto por semana",      before: "180+ alertas",   after: "11 accionables", pct: 94 },
+  { process: "Incidentes en producción por mes",     before: "6–8",            after: "0–1",            pct: 88 },
 ];
 
 export default function Metrics() {
@@ -16,7 +16,7 @@ export default function Metrics() {
         <div className="max-w-2xl mb-14">
           <span className="label text-teal-600">Resultados</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight tracking-tight">
-            Resultados que puedes{" "}
+            Resultados que podés{" "}
             <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
               medir
             </em>
@@ -61,6 +61,10 @@ export default function Metrics() {
             </div>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-xs text-neutral-400 max-w-2xl mx-auto">
+          Rangos basados en proyectos completados. Los números varían según tamaño, cloud provider y estado inicial de la infraestructura.
+        </p>
       </div>
     </section>
   );
