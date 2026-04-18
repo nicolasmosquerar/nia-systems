@@ -196,7 +196,7 @@ function ProviderCard({ p, index }: { p: Provider; index: number }) {
               background: p.color,
               boxShadow: `0 0 10px ${p.color}`,
             }} />
-            Certified
+            Producción-ready
           </div>
         </div>
       </div>
@@ -212,16 +212,17 @@ export default function Platform() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mb-16">
-          <span className="label text-teal-400">Plataforma</span>
+          <span className="label text-teal-400">Compatibilidad de stack</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight tracking-tight">
-            Cualquier cloud.{" "}
+            Trabajamos sobre lo que ya tenés.{" "}
             <em style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              Un mismo control plane.
+              Sin migraciones forzadas.
             </em>
           </h2>
           <p className="mt-4 text-lg text-slate-400 leading-relaxed">
-            Kubernetes como capa de abstracción — tu equipo opera un solo stack,
-            independiente de dónde corra.
+            No te pedimos que cambies de cloud. Traemos el mismo modelo operativo
+            a AWS, GCP, Azure, DigitalOcean, Hetzner o bare metal — sin reescribir
+            lo que ya funciona.
           </p>
         </div>
 
@@ -229,6 +230,22 @@ export default function Platform() {
           {providers.map((p, i) => (
             <ProviderCard key={p.name} p={p} index={i} />
           ))}
+        </div>
+
+        <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 pt-10 border-t border-white/[0.07]">
+          <p className="text-slate-400 text-base max-w-md">
+            ¿No estás seguro de si tu stack es compatible?{" "}
+            <span className="text-white font-medium">
+              En la primera llamada lo revisamos juntos.
+            </span>
+          </p>
+          <a href="#contacto"
+            className="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 bg-white/5 border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-200 text-sm">
+            Agenda el diagnóstico
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
