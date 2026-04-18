@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     template: "%s · NIA Systems",
   },
   description: siteDescription,
+  applicationName: "NIA Systems",
+  authors: [{ name: "NIA Systems", url: "https://niasystems.com" }],
+  creator: "NIA Systems",
+  publisher: "NIA Systems",
+  category: "Consultancy",
   keywords: [
     "consultoría cloud",
     "optimización de costes cloud",
@@ -43,7 +48,9 @@ export const metadata: Metadata = {
     "consultoría DevOps",
     "platform engineering",
   ],
-  authors: [{ name: "NIA Systems" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "es_ES",
@@ -60,7 +67,37 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "NIA Systems",
+  alternateName: "NIA",
+  url: "https://niasystems.com",
+  logo: "https://niasystems.com/icon.svg",
+  image: "https://niasystems.com/opengraph-image",
+  description: siteDescription,
+  areaServed: [
+    { "@type": "Place", name: "España" },
+    { "@type": "Place", name: "América Latina" },
+    { "@type": "Place", name: "Europa" },
+  ],
+  knowsLanguage: ["es", "en"],
+  serviceType: [
+    "Cloud consulting",
+    "Kubernetes platform engineering",
+    "Observability",
+    "Applied AI",
+  ],
+  slogan: "Reducimos el coste, la complejidad y la fragilidad de tu plataforma cloud.",
 };
 
 export default function RootLayout({
@@ -74,6 +111,10 @@ export default function RootLayout({
       className={`${dmSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         {children}
       </body>
     </html>

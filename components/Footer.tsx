@@ -40,7 +40,7 @@ export default function Footer() {
               </svg>
               <span className="h-6 w-px bg-brand-500/40" aria-hidden="true" />
               <span className="text-[17px] font-semibold tracking-tight">
-                <span className="text-white">Nia </span>
+                <span className="text-white">NIA </span>
                 <span className="text-brand-400">Systems</span>
               </span>
             </a>

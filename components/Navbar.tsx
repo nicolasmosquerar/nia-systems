@@ -50,7 +50,7 @@ export default function Navbar() {
               scrolled ? "bg-brand-600/30" : "bg-white/25"
             }`} aria-hidden="true" />
             <span className="text-[17px] font-semibold tracking-tight transition-colors duration-300">
-              <span className={scrolled ? "text-neutral-900" : "text-white"}>Nia </span>
+              <span className={scrolled ? "text-neutral-900" : "text-white"}>NIA </span>
               <span className={scrolled ? "text-brand-600" : "text-brand-400"}>Systems</span>
             </span>
           </a>

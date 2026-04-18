@@ -137,21 +137,21 @@ export default function About() {
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-neutral-200">
-                <p className="label text-neutral-400 mb-2">Forma de colaboración</p>
+                <p className="label text-neutral-400 mb-2">Contratación</p>
                 <p className="text-sm font-semibold text-neutral-900">
                   Retainer o por proyecto
                 </p>
                 <p className="mt-1 text-xs text-neutral-500 leading-relaxed">
-                  Alcance cerrado por defecto. Retainer disponible para operación continuada.
+                  Alcance cerrado por defecto. Facturación profesional con IVA cuando aplica.
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-neutral-200">
                 <p className="label text-neutral-400 mb-2">Modalidad</p>
                 <p className="text-sm font-semibold text-neutral-900">
-                  Remoto · LATAM y Europa
+                  Remoto · ES / EN
                 </p>
                 <p className="mt-1 text-xs text-neutral-500 leading-relaxed">
-                  Sesiones presenciales puntuales si el proyecto lo requiere.
+                  Trabajo distribuido con equipos en LATAM y Europa. Presencial puntual si el proyecto lo requiere.
                 </p>
               </div>
             </div>

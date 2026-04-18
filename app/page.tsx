@@ -8,6 +8,7 @@ import Deliverables from "@/components/Deliverables";
 import Platform from "@/components/Platform";
 import Metrics from "@/components/Metrics";
 import About from "@/components/About";
+import Criteria from "@/components/Criteria";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Platform />
         <Metrics />
         <About />
+        <Criteria />
         <Contact />
       </main>
       <Footer />

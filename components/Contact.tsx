@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect, useRef, useState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { initialContactState, submitContact } from "@/app/actions";
 
 const perks = [
@@ -30,12 +30,12 @@ const inputErrCls = "border-red-300 bg-red-50/40 focus:border-red-500 focus:ring
 
 export default function Contact() {
   const [state, formAction, pending] = useActionState(submitContact, initialContactState);
-  const [referrer, setReferrer] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  const referrerRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (typeof document !== "undefined") {
-      setReferrer(document.referrer || "");
+    if (referrerRef.current) {
+      referrerRef.current.value = document.referrer || "";
     }
   }, []);
 
@@ -150,7 +150,7 @@ export default function Contact() {
                 noValidate
               >
                 <input type="hidden" name="source" value="web" />
-                <input type="hidden" name="referrer" value={referrer} />
+                <input ref={referrerRef} type="hidden" name="referrer" defaultValue="" />
                 {/* Honeypot */}
                 <input
                   type="text"
