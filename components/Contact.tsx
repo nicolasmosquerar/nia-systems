@@ -1,7 +1,8 @@
 "use client";
 
 import { useActionState, useEffect, useRef } from "react";
-import { initialContactState, submitContact } from "@/app/actions";
+import { submitContact } from "@/app/actions";
+import { initialContactState } from "@/app/contact-types";
 
 const perks = [
   {

@@ -1,15 +1,6 @@
 "use server";
 
-export type ContactState = {
-  status: "idle" | "success" | "error";
-  message: string;
-  errors?: Partial<Record<"name" | "email" | "intent" | "message", string>>;
-};
-
-export const initialContactState: ContactState = {
-  status: "idle",
-  message: "",
-};
+import type { ContactState } from "./contact-types";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
