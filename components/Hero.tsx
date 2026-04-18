@@ -21,40 +21,45 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="mt-7 animate-reveal-1">
             <span className="block text-4xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] tracking-tight">
-              Tu nube te cuesta
+              Tu cloud bill sube cada mes.
             </span>
             <em className="block mt-3 text-4xl sm:text-6xl lg:text-7xl text-slate-400 leading-[1.08] tracking-tight"
               style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              más de lo que debería.
+              Nadie sabe exactamente por qué.
             </em>
             <span className="block mt-3 text-4xl sm:text-6xl lg:text-7xl font-semibold text-teal-400 leading-[1.08] tracking-tight">
-              Lo arreglamos en semanas.
+              Eso tiene solución.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="mt-8 max-w-xl text-lg text-slate-400 leading-relaxed animate-reveal-2">
-            Auditamos tu infraestructura, encontramos dónde va el dinero y qué frena
-            a tu equipo. Te entregamos un plan con el ROI de cada cambio — sin compromiso previo.
+            Auditamos tu infraestructura en 2 semanas. Te entregamos exactamente dónde va
+            el dinero, qué frena a tu equipo y el ROI de cada cambio. Sin compromiso previo.
+          </p>
+
+          {/* Para quién */}
+          <p className="mt-4 text-sm text-slate-500 animate-reveal-2">
+            Para Heads of Platform con 2 ingenieros haciendo el trabajo de 6.
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row items-start gap-3 animate-reveal-3">
+          <div className="mt-8 flex flex-col sm:flex-row items-start gap-3 animate-reveal-3">
             <a href="#contacto"
               className="group inline-flex items-center gap-2.5 px-7 py-4 bg-teal-600 text-white font-medium rounded-xl hover:bg-teal-500 transition-all duration-200 shadow-lg shadow-teal-900/40">
-              Agenda diagnóstico gratuito
+              Quiero ver dónde va mi gasto cloud
               <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"
                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a href="#servicios"
+            <a href="#proceso"
               className="inline-flex items-center gap-2 px-7 py-4 border border-white/10 text-white/70 font-medium rounded-xl hover:border-white/20 hover:text-white transition-all duration-200">
-              Ver servicios
+              Ver cómo trabajamos
             </a>
           </div>
 
-          {/* Social proof */}
+          {/* Trust line */}
           <p className="mt-4 text-sm text-slate-600 animate-reveal-3">
             Sin compromiso · 30 minutos · Respondemos en menos de 24h
           </p>

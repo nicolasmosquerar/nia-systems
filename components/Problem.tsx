@@ -1,28 +1,33 @@
 const problems = [
   {
-    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-    title: "Procesos manuales y lentos",
-    description: "Tareas repetitivas que consumen horas de trabajo y generan errores evitables.",
+    icon: "M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75",
+    title: "El bill de cloud sube y nadie sabe exactamente por qué",
+    description: "Los reportes de AWS o GCP no dicen nada accionable. El gasto crece, los recursos están subutilizados y nadie tiene tiempo de auditarlo.",
   },
   {
-    icon: "M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z",
-    title: "No saben por dónde empezar",
-    description: "Quieren usar IA pero no identifican dónde aplicarla con retorno real.",
+    icon: "M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z",
+    title: "Los deploys dependen de una o dos personas",
+    description: "Si no están disponibles, nada avanza. El conocimiento de cómo funciona la infraestructura vive en la cabeza de alguien, no en documentación.",
+  },
+  {
+    icon: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z",
+    title: "Onboarding de un ingeniero nuevo tarda 2 o 3 semanas",
+    description: "Solo para tener el entorno listo. Cada squad configuró las cosas diferente y no hay una plataforma común que estandarice el proceso.",
   },
   {
     icon: "M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636",
-    title: "Herramientas sin adopción",
-    description: "Prueban soluciones sueltas pero los equipos no las integran a su trabajo diario.",
+    title: "Los problemas en producción los detectan los clientes",
+    description: "No hay observabilidad real. Cuando algo falla, te enterás por un ticket de soporte, no por una alerta del sistema.",
   },
   {
     icon: "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
-    title: "Dudas sobre privacidad y costos",
-    description: "Preocupaciones legítimas sobre dónde van los datos y cuánto cuesta mantener la IA.",
+    title: "Llevan meses planeando la migración y no arranca",
+    description: "El plan existe. El ancho de banda no. El equipo de plataforma siempre tiene un incendio más urgente que impide avanzar con lo estratégico.",
   },
   {
-    icon: "M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342",
-    title: "Equipos sin formación en IA",
-    description: "Necesitan que sus personas aprendan a trabajar con IA de forma efectiva y responsable.",
+    icon: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z",
+    title: "Compraron herramientas de AI o K8s que nadie usa en producción",
+    description: "Están instaladas, funcionan en un entorno de prueba, y llevan meses ahí. El salto a producción nunca termina de suceder.",
   },
 ];
 
@@ -35,13 +40,14 @@ export default function Problem() {
         <div className="max-w-2xl">
           <span className="label text-teal-600">El problema</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight tracking-tight">
-            Problemas que{" "}
+            Si alguno de estos{" "}
             <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              resolvemos
+              te suena,
             </em>
+            {" "}podemos ayudarte.
           </h2>
           <p className="mt-4 text-lg text-neutral-500 leading-relaxed">
-            Si tu empresa enfrenta alguno de estos desafíos, podemos ayudarte.
+            Estos son los problemas más comunes en equipos de 50 a 300 personas que escalaron rápido sobre infraestructura que ya no alcanza.
           </p>
         </div>
 
