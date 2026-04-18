@@ -3,11 +3,12 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#proceso", label: "Proceso" },
+  { href: "#servicios",  label: "Servicios" },
+  { href: "#plataforma", label: "Plataforma" },
+  { href: "#proceso",    label: "Proceso" },
   { href: "#resultados", label: "Resultados" },
-  { href: "#nosotros", label: "Nosotros" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "#nosotros",   label: "Nosotros" },
+  { href: "#contacto",   label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -33,7 +34,7 @@ export default function Navbar() {
               <span className="text-white font-bold text-sm leading-none">N</span>
             </div>
             <span className="text-[17px] font-semibold tracking-tight text-neutral-900">
-              NexusAI
+              NIA Systems
             </span>
           </a>
 
@@ -47,7 +48,8 @@ export default function Navbar() {
             ))}
             <div className="ml-4 pl-4 border-l border-neutral-200">
               <a href="#contacto"
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-neutral-900 text-white text-[13px] font-medium rounded-lg hover:bg-neutral-800 transition-colors duration-200">
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-teal-600 text-[13px] font-medium rounded-lg border border-teal-200 hover:border-teal-300 hover:bg-teal-50 transition-all duration-200">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse-soft" />
                 Hablemos
                 <svg className="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M7 17l9.2-9.2M17 17V8H8" />
@@ -78,7 +80,7 @@ export default function Navbar() {
               </a>
             ))}
             <a href="#contacto"
-              className="block mt-3 px-4 py-2.5 bg-neutral-900 text-white text-sm font-medium rounded-lg text-center"
+              className="block mt-3 px-4 py-2.5 bg-white text-teal-600 text-sm font-medium rounded-lg border border-teal-200 text-center"
               onClick={() => setMenuOpen(false)}>
               Hablemos
             </a>

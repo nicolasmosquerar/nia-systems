@@ -14,28 +14,28 @@ export default function Hero() {
           <div className="animate-reveal">
             <span className="label text-teal-400 inline-flex items-center gap-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse-soft" />
-              Consultoría · Implementación · Formación
+              Cloud · Kubernetes · AI
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="mt-7 animate-reveal-1">
             <span className="block text-4xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] tracking-tight">
-              Implementamos IA útil
+              Auditamos y construimos
             </span>
-            <em className="block mt-3 text-4xl sm:text-6xl lg:text-7xl text-slate-400 leading-[1.08] tracking-tight not-italic"
+            <em className="block mt-3 text-4xl sm:text-6xl lg:text-7xl text-slate-400 leading-[1.08] tracking-tight"
               style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              para que tu empresa
+              tu plataforma cloud,
             </em>
             <span className="block mt-3 text-4xl sm:text-6xl lg:text-7xl font-semibold text-teal-400 leading-[1.08] tracking-tight">
-              trabaje mejor.
+              powered by K8s.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="mt-8 max-w-xl text-lg text-slate-400 leading-relaxed animate-reveal-2">
-            Automatización de procesos, asistentes inteligentes y capacitación
-            práctica. Con modelos en la nube o locales, según lo que tu negocio necesite.
+            Cloud-agnostic. Kubernetes-native. IA que resuelve problemas reales.
+            De auditoría a producción en semanas, no en trimestres.
           </p>
 
           {/* CTAs */}
@@ -59,10 +59,10 @@ export default function Hero() {
         <div className="mt-24 pt-10 border-t border-white/[0.07] animate-reveal-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
             {[
-              { value: "3–6", unit: "sem", label: "por piloto" },
-              { value: "70%", unit: "",    label: "menos tareas manuales" },
-              { value: "100%", unit: "",   label: "local si lo necesitas" },
-              { value: "4+",   unit: "",   label: "líneas de servicio" },
+              { value: "100%", unit: "",    label: "cloud-agnostic" },
+              { value: "3–6",  unit: "sem", label: "por piloto" },
+              { value: "K8s",  unit: "",    label: "en cualquier provider" },
+              { value: "24/7", unit: "",    label: "observabilidad incluida" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="flex items-baseline gap-1">

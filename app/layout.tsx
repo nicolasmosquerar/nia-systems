@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, Newsreader, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -8,10 +8,10 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-const instrumentSerif = Instrument_Serif({
+const newsreader = Newsreader({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500"],
   style: ["normal", "italic"],
 });
 
@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NexusAI — Consultoría de IA para Empresas",
+  title: "NIA Systems — Cloud · Kubernetes · AI",
   description:
-    "Implementamos IA útil para que tu empresa trabaje mejor. Automatización, asistentes inteligentes, RAG y formación práctica.",
+    "Auditamos y construimos tu plataforma cloud, powered by Kubernetes. IA aplicada, observabilidad y formación SRE para equipos de plataforma.",
 };
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${dmSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} scroll-smooth`}
+      className={`${dmSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
         {children}

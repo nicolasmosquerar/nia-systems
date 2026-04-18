@@ -1,10 +1,10 @@
 const differentiators = [
-  { title: "Consultoría + Implementación + Formación", description: "La mayoría ofrece solo una de las tres. Nosotros cubrimos el ciclo completo." },
-  { title: "IA de pago o local, según el caso",        description: "No estamos atados a un proveedor. Elegimos lo que funciona mejor para tu negocio." },
-  { title: "Foco en adopción real",                    description: "No entregamos solo una demo. Nos aseguramos de que los equipos realmente la usen." },
-  { title: "Proyectos en procesos de negocio",         description: "Trabajamos sobre problemas reales, no tecnología por la tecnología." },
-  { title: "De simple a sofisticado",                  description: "Empezamos con una automatización y escalamos hasta sistemas multi-agente." },
-  { title: "Mirada práctica sobre seguridad",          description: "Sin promesas vacías. Criterios claros sobre datos, costos y operación." },
+  { title: "Auditoría + Implementación + Formación",   description: "La mayoría ofrece solo una de las tres. Nosotros cubrimos el ciclo completo." },
+  { title: "Cloud-agnostic por diseño",                description: "No estamos atados a ningún proveedor. Elegimos el stack que mejor funciona para tu negocio." },
+  { title: "Kubernetes como control plane",            description: "Un solo modelo operativo, independiente de si corres en AWS, GCP, Azure o bare metal." },
+  { title: "IA aplicada, no experimental",             description: "Trabajamos sobre problemas de negocio reales. Nada de demos que nadie usa en producción." },
+  { title: "De piloto a producción",                   description: "Empezamos acotado y escalamos. Pilotos en 3–6 semanas con métricas claras desde el día uno." },
+  { title: "Mirada práctica sobre seguridad",          description: "Sin promesas vacías. Criterios claros sobre datos, costos y operación en todo momento." },
 ];
 
 export default function About() {
@@ -19,23 +19,24 @@ export default function About() {
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight tracking-tight">
               Sobre{" "}
               <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-                NexusAI
+                NIA Systems
               </em>
             </h2>
             <div className="mt-8 space-y-4 text-neutral-500 leading-relaxed">
               <p className="text-lg">
-                Somos una consultora especializada en ayudar a empresas a incorporar
-                inteligencia artificial de forma práctica, segura y con resultados medibles.
+                Somos una consultora especializada en cloud, Kubernetes e IA aplicada.
+                Auditamos, implementamos y formamos — cubriendo el ciclo completo que la mayoría
+                no cubre.
               </p>
               <p>
-                Nuestro enfoque combina diagnóstico estratégico, implementación técnica y
-                formación de equipos. No creemos en demos que nadie usa — creemos en
-                soluciones que los equipos adoptan y que transforman cómo trabajan día a día.
+                Nuestro enfoque es cloud-agnostic y Kubernetes-native. Trabajamos sobre
+                cualquier provider y dejamos a los equipos con un modelo operativo unificado,
+                independiente de dónde corra la infraestructura.
               </p>
               <p>
-                Trabajamos con empresas de todos los tamaños, desde PYMEs que necesitan
-                automatizar sus primeros procesos hasta organizaciones que buscan integrar
-                IA con sus sistemas internos.
+                No prometemos innovación — prometemos mejoras concretas. Equipos mid-market
+                y enterprise que necesitan pasar de auditoría a producción sin sorpresas en el
+                camino.
               </p>
             </div>
           </div>

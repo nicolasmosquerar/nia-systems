@@ -1,9 +1,10 @@
 const links = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#proceso",   label: "Proceso" },
-  { href: "#resultados",label: "Resultados" },
-  { href: "#nosotros",  label: "Nosotros" },
-  { href: "#contacto",  label: "Contacto" },
+  { href: "#servicios",  label: "Servicios" },
+  { href: "#plataforma", label: "Plataforma" },
+  { href: "#proceso",    label: "Proceso" },
+  { href: "#resultados", label: "Resultados" },
+  { href: "#nosotros",   label: "Nosotros" },
+  { href: "#contacto",   label: "Contacto" },
 ];
 
 export default function Footer() {
@@ -16,11 +17,11 @@ export default function Footer() {
               <div className="w-7 h-7 rounded-md bg-teal-600 flex items-center justify-center">
                 <span className="text-white font-bold text-xs leading-none">N</span>
               </div>
-              <span className="text-[17px] font-semibold text-white tracking-tight">NexusAI</span>
+              <span className="text-[17px] font-semibold text-white tracking-tight">NIA Systems</span>
             </a>
             <p className="mt-3 text-sm text-slate-500 max-w-xs leading-relaxed">
-              IA útil para empresas que quieren trabajar mejor. Consultoría,
-              implementación y formación.
+              Cloud, Kubernetes e IA útil. Auditoría, implementación y formación
+              para equipos de plataforma.
             </p>
           </div>
 
@@ -36,9 +37,9 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-600">
-            &copy; {new Date().getFullYear()} NexusAI. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} NIA Systems. Todos los derechos reservados.
           </p>
-          <p className="label text-slate-700">Diseñado con precisión.</p>
+          <p className="label text-slate-700">Built for production.</p>
         </div>
       </div>
     </footer>
