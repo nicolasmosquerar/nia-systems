@@ -71,7 +71,7 @@ export default function Hero() {
             {[
               { value: "40%",  unit: "",    label: "menos gasto cloud en promedio" },
               { value: "2",    unit: "sem", label: "para entregar el diagnóstico" },
-              { value: "3–6",  unit: "sem", label: "de auditoría a producción" },
+              { value: "3–6",  unit: "sem", label: "de kickoff a producción" },
               { value: "24/7", unit: "",    label: "observabilidad incluida" },
             ].map((s) => (
               <div key={s.label}>

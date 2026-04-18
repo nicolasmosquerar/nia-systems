@@ -65,6 +65,16 @@ export default function Problem() {
             </div>
           ))}
         </div>
+
+        <div className="mt-14 text-center">
+          <a href="#servicios"
+            className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 hover:text-teal-500 transition-colors duration-200">
+            Ver cómo lo resolvemos
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );

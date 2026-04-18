@@ -39,7 +39,7 @@ export default function Footer() {
           <p className="text-xs text-slate-600">
             &copy; {new Date().getFullYear()} NIA Systems. Todos los derechos reservados.
           </p>
-          <p className="label text-slate-700">Built for production.</p>
+          <p className="label text-slate-700">Hecho para producción.</p>
         </div>
       </div>
     </footer>
