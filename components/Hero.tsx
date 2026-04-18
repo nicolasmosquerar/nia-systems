@@ -21,28 +21,28 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="mt-7 animate-reveal-1">
             <span className="block text-4xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] tracking-tight">
-              Auditamos y construimos
+              Tu nube te cuesta
             </span>
             <em className="block mt-3 text-4xl sm:text-6xl lg:text-7xl text-slate-400 leading-[1.08] tracking-tight"
               style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              tu plataforma cloud,
+              más de lo que debería.
             </em>
             <span className="block mt-3 text-4xl sm:text-6xl lg:text-7xl font-semibold text-teal-400 leading-[1.08] tracking-tight">
-              powered by K8s.
+              Lo arreglamos en semanas.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="mt-8 max-w-xl text-lg text-slate-400 leading-relaxed animate-reveal-2">
-            Cloud-agnostic. Kubernetes-native. IA que resuelve problemas reales.
-            De auditoría a producción en semanas, no en trimestres.
+            Auditamos tu infraestructura, encontramos dónde va el dinero y qué frena
+            a tu equipo. Te entregamos un plan con el ROI de cada cambio — sin compromiso previo.
           </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-start gap-3 animate-reveal-3">
             <a href="#contacto"
               className="group inline-flex items-center gap-2.5 px-7 py-4 bg-teal-600 text-white font-medium rounded-xl hover:bg-teal-500 transition-all duration-200 shadow-lg shadow-teal-900/40">
-              Agenda un diagnóstico
+              Agenda diagnóstico gratuito
               <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"
                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -53,15 +53,20 @@ export default function Hero() {
               Ver servicios
             </a>
           </div>
+
+          {/* Social proof */}
+          <p className="mt-4 text-sm text-slate-600 animate-reveal-3">
+            Sin compromiso · 30 minutos · Respondemos en menos de 24h
+          </p>
         </div>
 
         {/* Stats */}
         <div className="mt-24 pt-10 border-t border-white/[0.07] animate-reveal-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
             {[
-              { value: "100%", unit: "",    label: "cloud-agnostic" },
-              { value: "3–6",  unit: "sem", label: "por piloto" },
-              { value: "K8s",  unit: "",    label: "en cualquier provider" },
+              { value: "40%",  unit: "",    label: "menos gasto cloud en promedio" },
+              { value: "2",    unit: "sem", label: "para entregar el diagnóstico" },
+              { value: "3–6",  unit: "sem", label: "de auditoría a producción" },
               { value: "24/7", unit: "",    label: "observabilidad incluida" },
             ].map((s) => (
               <div key={s.label}>
