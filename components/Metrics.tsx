@@ -1,10 +1,46 @@
-const metrics = [
-  { process: "Gasto cloud mensual",                  before: "$18,000/mes",    after: "$10,400/mes",    pct: 42 },
-  { process: "Tiempo de deploy a producción",        before: "2–3 días",       after: "< 20 min",       pct: 93 },
-  { process: "MTTR en incidentes de infra",          before: "4 horas",        after: "< 35 min",       pct: 85 },
-  { process: "Onboarding de un ingeniero nuevo",     before: "3 semanas",      after: "2 días",         pct: 76 },
-  { process: "Alertas sin contexto por semana",      before: "180+ alertas",   after: "11 accionables", pct: 94 },
-  { process: "Incidentes en producción por mes",     before: "6–8",            after: "0–1",            pct: 88 },
+const indicators = [
+  {
+    area: "Coste cloud",
+    metric: "Gasto mensual imputable",
+    description:
+      "Visibilidad por entorno, equipo y servicio. Reducción del gasto innecesario sobre recursos subutilizados, infrautilizados o duplicados.",
+    expectation: "Rango habitual 15–40 %",
+  },
+  {
+    area: "Entrega",
+    metric: "Tiempo de despliegue a producción",
+    description:
+      "Desde commit a producción, medido de forma automática. Reducción por estandarización de pipelines y plataforma interna.",
+    expectation: "Objetivo horas → minutos",
+  },
+  {
+    area: "Fiabilidad",
+    metric: "MTTR en incidentes de infraestructura",
+    description:
+      "Tiempo medio de recuperación sobre incidentes relevantes. Reducción por observabilidad accionable y procedimientos operativos documentados.",
+    expectation: "Objetivo halving por ciclo",
+  },
+  {
+    area: "Autonomía",
+    metric: "Onboarding técnico completo",
+    description:
+      "Tiempo hasta que una persona técnica puede desplegar y depurar en el stack real. Mejora por estandarización y documentación operativa.",
+    expectation: "Objetivo semanas → días",
+  },
+  {
+    area: "Observabilidad",
+    metric: "Ruido en alertas",
+    description:
+      "Porcentaje de alertas accionables sobre total generado. Reducción mediante revisión de umbrales, deduplicación y correlación.",
+    expectation: "Objetivo > 80 % accionables",
+  },
+  {
+    area: "Dependencia",
+    metric: "Cuellos de botella por persona clave",
+    description:
+      "Número de procesos operativos que requieren a una persona específica para avanzar. Reducción por documentación y plataforma compartida.",
+    expectation: "Objetivo cero bloqueantes",
+  },
 ];
 
 export default function Metrics() {
@@ -12,59 +48,60 @@ export default function Metrics() {
     <section id="resultados" className="relative py-24 sm:py-32 bg-neutral-50">
       <div className="absolute inset-0 dot-grid" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-
         <div className="max-w-2xl mb-14">
-          <span className="label text-teal-600">Resultados</span>
+          <span className="label text-brand-600">Indicadores que seguimos</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight tracking-tight">
-            Resultados que podés{" "}
-            <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              medir
+            El impacto se mide.{" "}
+            <em
+              className="not-italic"
+              style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}
+            >
+              No se promete.
             </em>
           </h2>
-          <p className="mt-4 text-lg text-neutral-500 leading-relaxed">
-            Cada proyecto se evalúa con métricas claras. No prometemos innovación — prometemos mejoras concretas.
+          <p className="mt-5 text-lg text-neutral-500 leading-relaxed">
+            Cada proyecto se evalúa con indicadores acordados en la fase de alcance. Los
+            rangos objetivo son orientativos y dependen del punto de partida, del proveedor
+            cloud y del alcance real del trabajo.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {metrics.map((m) => (
-            <div key={m.process}
-              className="card group bg-white rounded-2xl border border-neutral-200 hover:border-teal-200 overflow-hidden">
+          {indicators.map((i) => (
+            <div
+              key={i.metric}
+              className="card group bg-white rounded-2xl border border-neutral-200 hover:border-brand-200 overflow-hidden"
+            >
               <div className="p-6">
-                <div className="flex items-start justify-between gap-3 mb-6">
-                  <h3 className="text-[15px] font-semibold text-neutral-900 leading-snug">{m.process}</h3>
-                  <span className="shrink-0 text-2xl font-bold text-teal-600 leading-none">
-                    {m.pct}%
+                <div className="flex items-center justify-between mb-4">
+                  <span className="label text-brand-600">{i.area}</span>
+                  <span className="label text-neutral-300">
+                    {i.expectation}
                   </span>
                 </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="flex-1">
-                    <p className="label text-neutral-400 mb-1">Antes</p>
-                    <p className="text-sm text-neutral-400 line-through decoration-red-300">{m.before}</p>
-                  </div>
-                  <svg className="w-4 h-4 text-neutral-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                  <div className="flex-1">
-                    <p className="label text-teal-600 mb-1">Después</p>
-                    <p className="text-sm font-semibold text-neutral-900">{m.after}</p>
-                  </div>
-                </div>
+                <h3 className="text-[15px] font-semibold text-neutral-900 leading-snug">
+                  {i.metric}
+                </h3>
+                <p className="mt-2 text-sm text-neutral-500 leading-relaxed">
+                  {i.description}
+                </p>
               </div>
-
-              {/* Progress bar */}
-              <div className="h-1 bg-neutral-100">
-                <div className="h-full bg-teal-500 transition-all duration-500 group-hover:opacity-100 opacity-50"
-                  style={{ width: `${m.pct}%` }} />
-              </div>
+              <div className="h-1 bg-brand-500/20 group-hover:bg-brand-500/60 transition-colors" />
             </div>
           ))}
         </div>
 
-        <p className="mt-10 text-center text-xs text-neutral-400 max-w-2xl mx-auto">
-          Rangos basados en proyectos completados. Los números varían según tamaño, cloud provider y estado inicial de la infraestructura.
-        </p>
+        <div className="mt-14 max-w-3xl mx-auto text-center">
+          <p className="text-sm text-neutral-500 leading-relaxed">
+            Los indicadores se definen antes de intervenir y se revisan en cada entrega.
+            En la sesión inicial explicamos qué instrumentación requiere cada métrica y qué
+            es razonable esperar en tu contexto.
+          </p>
+          <p className="mt-3 text-xs text-neutral-400">
+            No publicamos porcentajes de casos pasados hasta poder respaldarlos con datos
+            verificables. Las mejoras reales se discuten con referencias concretas.
+          </p>
+        </div>
       </div>
     </section>
   );

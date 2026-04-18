@@ -21,10 +21,46 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const siteDescription =
+  "Consultoría cloud, Kubernetes e IA aplicada. Reducimos el coste, la complejidad y la fragilidad de tu plataforma. Auditoría, implementación y transferencia con alcance, entregables y métricas definidos.";
+
 export const metadata: Metadata = {
-  title: "NIA Systems — Cloud · Kubernetes · AI",
-  description:
-    "Auditamos y construimos tu plataforma cloud, powered by Kubernetes. IA aplicada, observabilidad y formación SRE para equipos de plataforma.",
+  metadataBase: new URL("https://niasystems.com"),
+  title: {
+    default: "NIA Systems — Consultoría cloud, Kubernetes e IA aplicada",
+    template: "%s · NIA Systems",
+  },
+  description: siteDescription,
+  keywords: [
+    "consultoría cloud",
+    "optimización de costes cloud",
+    "Kubernetes para empresas",
+    "plataforma cloud",
+    "observabilidad",
+    "modernización de infraestructura",
+    "IA aplicada a operaciones",
+    "consultor de infraestructura cloud",
+    "consultoría DevOps",
+    "platform engineering",
+  ],
+  authors: [{ name: "NIA Systems" }],
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "https://niasystems.com",
+    siteName: "NIA Systems",
+    title: "NIA Systems — Consultoría cloud, Kubernetes e IA aplicada",
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NIA Systems — Consultoría cloud, Kubernetes e IA aplicada",
+    description: siteDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

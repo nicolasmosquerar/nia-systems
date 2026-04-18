@@ -77,7 +77,7 @@ const providers: Provider[] = [
   },
   {
     name: "On-prem",
-    tag: "Bare metal / híbrido",
+    tag: "Bare metal e híbrido",
     color: "#14b8a6",
     glyph: (
       <svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="#14b8a6" strokeWidth="2.5">
@@ -196,7 +196,7 @@ function ProviderCard({ p, index }: { p: Provider; index: number }) {
               background: p.color,
               boxShadow: `0 0 10px ${p.color}`,
             }} />
-            Producción-ready
+            Listo para producción
           </div>
         </div>
       </div>
@@ -208,21 +208,21 @@ export default function Platform() {
   return (
     <section id="plataforma" className="relative py-24 sm:py-32 bg-slate-950 overflow-hidden">
       <div className="absolute inset-0 dot-grid-dark" />
-      <div className="absolute -top-20 right-0 w-96 h-96 orb bg-teal-500/10 animate-pulse-soft" />
+      <div className="absolute -top-20 right-0 w-96 h-96 orb bg-brand-500/10 animate-pulse-soft" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mb-16">
-          <span className="label text-teal-400">Compatibilidad de stack</span>
+          <span className="label text-brand-400">Compatibilidad de stack</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight tracking-tight">
-            Trabajamos sobre lo que ya tenés.{" "}
+            Trabajamos sobre lo que ya tienes.{" "}
             <em style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-              Sin migraciones forzadas.
+              Independiente del proveedor.
             </em>
           </h2>
-          <p className="mt-4 text-lg text-slate-400 leading-relaxed">
-            No te pedimos que cambies de cloud. Traemos el mismo modelo operativo
-            a AWS, GCP, Azure, DigitalOcean, Hetzner o bare metal — sin reescribir
-            lo que ya funciona.
+          <p className="mt-5 text-lg text-slate-400 leading-relaxed">
+            No hay migraciones forzadas. Llevamos el mismo modelo operativo a AWS, GCP, Azure,
+            DigitalOcean, Hetzner o infraestructura on-premise, sin reescribir lo que ya
+            funciona.
           </p>
         </div>
 
@@ -234,14 +234,14 @@ export default function Platform() {
 
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 pt-10 border-t border-white/[0.07]">
           <p className="text-slate-400 text-base max-w-md">
-            ¿No estás seguro de si tu stack es compatible?{" "}
+            ¿Dudas sobre si tu stack encaja con este modelo?{" "}
             <span className="text-white font-medium">
-              En la primera llamada lo revisamos juntos.
+              Lo revisamos contigo en la sesión inicial.
             </span>
           </p>
           <a href="#contacto"
             className="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 bg-white/5 border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-200 text-sm">
-            Agenda el diagnóstico
+            Agendar sesión inicial
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

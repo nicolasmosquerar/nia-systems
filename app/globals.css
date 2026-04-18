@@ -1,9 +1,27 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   --font-sans: var(--font-body);
   --font-serif: var(--font-display);
   --font-mono: var(--font-mono);
+
+  /* Brand palette — terracota, derived from logo color #c96736 */
+  --color-brand-50:  #fdf5f0;
+  --color-brand-100: #f9e2d2;
+  --color-brand-200: #f1c3a4;
+  --color-brand-300: #e6a072;
+  --color-brand-400: #d98049;
+  --color-brand-500: #d07045;
+  --color-brand-600: #c96736;
+  --color-brand-700: #a84e24;
+  --color-brand-800: #833c1d;
+  --color-brand-900: #5c2a17;
+  --color-brand-950: #391810;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #0a0a0a;
 }
 
 body {

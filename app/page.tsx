@@ -1,9 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import Audience from "@/components/Audience";
 import Services from "@/components/Services";
-import Platform from "@/components/Platform";
 import Process from "@/components/Process";
+import Deliverables from "@/components/Deliverables";
+import Platform from "@/components/Platform";
 import Metrics from "@/components/Metrics";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -16,11 +18,13 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
+        <Audience />
         <Services />
         <Process />
+        <Deliverables />
         <Platform />
-        <About />
         <Metrics />
+        <About />
         <Contact />
       </main>
       <Footer />
