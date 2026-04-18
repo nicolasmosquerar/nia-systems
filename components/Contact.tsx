@@ -42,11 +42,11 @@ export default function Contact() {
 
           {/* Left */}
           <div>
-            <span className="label text-teal-600">Contacto</span>
+            <span className="label text-teal-600">Diagnóstico gratuito</span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight tracking-tight">
-              ¿Tu infraestructura te frena{" "}
+              Empezamos con 30 minutos.{" "}
               <em className="not-italic" style={{ fontFamily: "var(--font-display), Georgia, serif", fontStyle: "italic" }}>
-                o te impulsa?
+                Sin propuestas, sin compromiso.
               </em>
             </h2>
             <p className="mt-5 text-lg text-neutral-500 leading-relaxed">
@@ -80,8 +80,11 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-neutral-900">Mensaje recibido</h3>
-                <p className="mt-2 text-neutral-600">Te contactaremos en menos de 24 horas.</p>
+                <h3 className="mt-5 text-xl font-semibold text-neutral-900">Tu diagnóstico está en camino.</h3>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
+                  Te responde un ingeniero — no un SDR. En menos de 24h coordinamos
+                  30 minutos para entender tu situación. Sin presentación, sin propuesta, sin presión.
+                </p>
                 <button onClick={() => setSubmitted(false)}
                   className="mt-6 text-sm font-medium text-teal-600 hover:text-teal-700 underline underline-offset-4 transition-colors">
                   Enviar otro mensaje
@@ -103,7 +106,19 @@ export default function Contact() {
                   <input type="text" id="company" name="company" className={inputCls} placeholder="Nombre de tu empresa" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700">Mensaje</label>
+                  <label htmlFor="intent" className="block text-sm font-medium text-neutral-700">¿Qué te trajo acá?</label>
+                  <select id="intent" name="intent" required
+                    className={`${inputCls} cursor-pointer`}>
+                    <option value="" disabled selected>Seleccioná una opción</option>
+                    <option value="cloud-cost">Gasto cloud alto o inexplicable</option>
+                    <option value="deployments">Deployments lentos o frágiles</option>
+                    <option value="kubernetes">Modernización / plataforma Kubernetes</option>
+                    <option value="ai">AI aplicada — quiero llevarlo a producción</option>
+                    <option value="unsure">No sé por dónde empezar</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700">¿Cuál es tu problema más urgente?</label>
                   <textarea id="message" name="message" required rows={4}
                     className={`${inputCls} resize-none`}
                     placeholder="¿Cuál es el problema más urgente que enfrenta tu equipo hoy?" />
