@@ -3,25 +3,29 @@ const steps = [
     num: "01",
     title: "Diagnóstico",
     sub: "2 semanas · sin compromiso",
-    description: "Empezamos con 30 minutos para entender tu situación. Si hay fit, auditamos tu infraestructura completa. Te entregamos los hallazgos con impacto estimado y qué hacer primero. Si después del diagnóstico no ves valor, no hay nada más que firmar.",
+    description: "Auditamos tu infraestructura completa y te entregamos hallazgos priorizados por impacto — con el ROI estimado de cada cambio.",
+    note: "Si después del diagnóstico no ves valor, no hay nada más que firmar. El informe es tuyo de todas formas.",
   },
   {
     num: "02",
-    title: "Diseño y alineación",
+    title: "Alcance y alineación",
     sub: "1 semana · antes de escribir código",
-    description: "Elegimos juntos el primer caso de alto impacto y bajo riesgo. Definimos alcance, responsables, cronograma y métricas de éxito. No arrancamos hasta que los dos estamos alineados — sin sorpresas en el camino.",
+    description: "Definimos juntos el primer caso de alto impacto y bajo riesgo. Salís de esta semana con alcance, cronograma, responsables y métricas de éxito firmadas — sin sorpresas en el camino.",
+    note: null,
   },
   {
     num: "03",
     title: "Implementación",
-    sub: "3–6 semanas · entregas incrementales",
-    description: "Construimos, configuramos e integramos con tu stack actual. No entregamos todo al final — trabajamos en ciclos cortos para que siempre sepas cómo va. Tu equipo participa desde el principio.",
+    sub: "3–6 semanas · entregas semanales",
+    description: "Ciclos cortos: cada semana sabés cómo va y qué sigue. Tu equipo participa desde el día uno — no hereda un sistema que nadie entiende al final.",
+    note: null,
   },
   {
     num: "04",
-    title: "Transferencia y escalamiento",
-    sub: "Al cerrar · tu equipo opera solo",
-    description: "Documentamos todo. Formamos a tu equipo en lo que implementamos. Medimos los resultados contra las métricas del paso 2. Cuando nos vamos, tu equipo puede operar sin nosotros.",
+    title: "Cierre y transferencia",
+    sub: "Al terminar · tu equipo opera solo",
+    description: "Documentamos todo lo que implementamos y formamos a tu equipo sobre su propio stack. Medimos resultados contra las métricas del paso 2. Cuando nos vamos, no volvés a necesitarnos para lo que construimos.",
+    note: null,
   },
 ];
 
@@ -56,9 +60,19 @@ export default function Process() {
               <h3 className="text-base font-semibold text-white mb-1">{step.title}</h3>
               <p className="label text-slate-600 mb-4">{step.sub}</p>
               <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+              {step.note && (
+                <p className="mt-3 text-xs text-slate-500 leading-relaxed border-t border-white/5 pt-3">
+                  {step.note}
+                </p>
+              )}
             </div>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-sm text-slate-500 max-w-xl mx-auto">
+          Trabajamos en paralelo a tu equipo — sin freezes de deploy,
+          sin interrumpir lo que ya está en producción.
+        </p>
       </div>
     </section>
   );
